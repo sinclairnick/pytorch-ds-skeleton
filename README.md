@@ -1,5 +1,3 @@
-# Project Name
-
 ---
 
 ## Skeleton How To
@@ -63,6 +61,8 @@ File Structure:
 **<sub><sup>Delete this message before publishing your own repo</sup></sub>**
 
 ---
+
+# Project Name
 
 ## Description
 
