@@ -1,0 +1,7 @@
+project_name: project_name
+defaults:
+  data: data
+  model: model_name
+  training: training
+  testing: testing
+  inference: inference

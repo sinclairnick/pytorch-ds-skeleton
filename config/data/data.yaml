@@ -1,0 +1,3 @@
+gdrive: # {ID: fname}'s of Google Drive archives to download
+  - file_id: output_fname
+  - file_id: output_fname

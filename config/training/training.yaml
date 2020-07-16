@@ -1,0 +1,18 @@
+data:
+  train_path: path/to/train
+  val_path: path/to/val
+hparams:
+  max_epochs: 100
+  min_epochs: 0
+  validation_check_interval: 1 # how far through a training set to run validation [0,1]
+  dev_run: false # whether to do a test run through 1xTrain and 1xVal step
+  batch_size: 32
+  auto_scale_batch: 'binsearch' # overrides batch size with auto-found optimum
+  num_workers: 1 # num of cores to use for loading data (generally set to num CPUs)
+  gpus: 1 # number of gpus
+  resume_from: # the checkpoint to resume from
+  precision: 16
+reproducability: 1 # {0: None, 1: Seeding, 2: Seeding and Deterministic CUDA}
+augmentations: # data augmentations applied during training
+  something:
+    params: 0

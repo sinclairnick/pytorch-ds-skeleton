@@ -1,0 +1,9 @@
+.DS_STORE
+.MAC_OSX
+__PYCACHE__
+!.gitignore
+bin/checkpoints/*
+bin/models/*
+!**/*.gitkeep
+.vscode
+*.log
