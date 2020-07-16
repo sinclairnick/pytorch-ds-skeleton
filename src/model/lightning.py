@@ -6,13 +6,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch import optim
 from torch.utils.data import DataLoader
-import gdown
 
 from pytorch_lightning import _logger as log
 from pytorch_lightning.core import LightningModule
 
 from model.model import Model
 from data.datasets import TrainDataset, ValDataset, TestDataset
+from data.retrieve import retrieve
 
 class LightningTemplateModel(LightningModule):
     """
@@ -31,12 +31,9 @@ class LightningTemplateModel(LightningModule):
         Run only at the start of training.
         Download and save data to disk
         """
-        # Iterate over and download all the Google Drive documents
-        cfg = self.cfg
-        if cfg.data.gdrive is not None and isinstance(cfg.data.gdrive, list):
-            for file_id, fname in cfg.data.gdrive.items():
-                url = "https://drive.google.com/uc?id={id}".format(id=file_id)
-                gdown.cached_download(url, fname, postprocess=gdown.extractall)
+        retrieve(self.cfg)
+        pass
+     
 
     def setup(self):
         """

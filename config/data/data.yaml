@@ -1,3 +1,4 @@
-gdrive: # {ID: fname}'s of Google Drive archives to download
-  - file_id: output_fname
-  - file_id: output_fname
+google_storage:
+  force: false # redownload if already downloaded
+  - bucket_name:
+      - blob: destination
