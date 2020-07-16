@@ -1,5 +1,3 @@
----
-
 ## Skeleton How To
 
 This skeleton uses PyTorch-Lightning and Hydra with common DS libraries like numpy and pandas preinstalled. It is set up for Google Cloud Storage by default, but this can be easily changed.
